@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy — codewithcopilot.ai</title>
+  <meta name="description" content="Browse all GitHub Copilot learning modules. 18 lessons organized by level — from foundations to advanced agent workflows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="learn">
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">🤖</span>
+        <span>codewithcopilot.ai</span>
+      </a>
+      <nav class="site-nav">
+        <a href="learn.html" class="active">🎓 Academy</a>
+        <a href="index.html#tools">🛠 Tools</a>
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Page Content ───────────────────────────────────── -->
+  <main class="learn-page">
+
+    <!-- Progress Banner — filled by app.js -->
+    <div class="progress-banner" id="progress-banner">
+      <div class="progress-text">
+        <h2>GitHub Copilot Academy</h2>
+        <p id="progress-subtitle">Loading your progress…</p>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+        </div>
+        <div class="progress-bar-label" id="progress-label">0 of 18 completed</div>
+      </div>
+    </div>
+
+    <!-- Module sections — rendered by app.js -->
+    <div id="modules-container">
+      <p style="color: var(--text-muted); text-align:center; padding: 40px 0;">Loading modules…</p>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>Built with ❤️ · <a href="https://codewithcopilot.ai">codewithcopilot.ai</a></p>
+    <p style="margin-top:8px; font-size:.78rem;">Not affiliated with GitHub or Microsoft · All video content belongs to respective creators</p>
+  </footer>
+
+  <script src="js/modules.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
