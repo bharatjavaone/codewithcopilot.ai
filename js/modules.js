@@ -15,7 +15,7 @@ const MODULES = [
     series: 'Foundations',
     title: 'Ask, Edit & Agent — Copilot Chat Modes in VS Code',
     duration: '80 min',
-    videoId: 'REPLACE_101', // ← Paste YouTube video ID here
+    videoId: 's7Qzq0ejhjg', // ← Paste YouTube video ID here
     objectives: [
       'Understand the three core chat modes: Ask, Edit, and Agent',
       'Know when to choose each mode for different coding tasks',
@@ -84,7 +84,7 @@ const MODULES = [
     series: 'Foundations',
     title: 'Hands-On Lab — The Power of GitHub Copilot in VS Code',
     duration: '63 min',
-    videoId: 'REPLACE_102',
+    videoId: 'dxDqelvVc2U',
     objectives: [
       'Experience inline code completions and understand how they work',
       'Use Copilot to generate functions, tests, and documentation from comments',
@@ -149,7 +149,7 @@ const MODULES = [
     series: 'Prompt Engineering',
     title: 'Prompt Engineering Foundations — Simple, Specific, Short',
     duration: '12 min',
-    videoId: 'REPLACE_201',
+    videoId: 'hh1nOX14TyY',
     objectives: [
       'Apply the three core principles: Simple, Specific, Short',
       'Distinguish between high-quality and low-quality prompts',
@@ -212,7 +212,7 @@ const MODULES = [
     series: 'Prompt Engineering',
     title: 'Custom Chat Modes in VS Code — From Workflow to Beast Mode',
     duration: '32 min',
-    videoId: 'REPLACE_211',
+    videoId: '5-HRDXO3iC0',
     objectives: [
       'Understand what custom chat modes are and how they differ from default modes',
       'Create a .chatmode.md file to define a reusable workflow prompt',
@@ -269,7 +269,7 @@ const MODULES = [
     series: 'Prompt Engineering',
     title: 'Plan Agent in VS Code — From Idea to Reviewable Steps',
     duration: '8 min',
-    videoId: 'REPLACE_221',
+    videoId: 'xR3fuKtWGN0',
     objectives: [
       'Use the Plan agent to break a large feature request into reviewable steps',
       'Edit and refine the generated plan before execution begins',
@@ -319,7 +319,7 @@ const MODULES = [
     series: 'Prompt Engineering',
     title: 'Behind the Scenes of VS Code\'s Planning Agent',
     duration: '28 min',
-    videoId: 'REPLACE_231',
+    videoId: 'S9GZWSNOPK8',
     objectives: [
       'Understand how the planning agent assembles context from your codebase',
       'Learn why context window limits affect the quality of generated plans',
@@ -371,7 +371,7 @@ const MODULES = [
     series: 'Customization',
     title: 'Smaller Prompts, Better Answers — Copilot Custom Instructions',
     duration: '13 min',
-    videoId: 'REPLACE_301',
+    videoId: 'zwIlqbTHjac',
     objectives: [
       'Create a .github/copilot-instructions.md file in your repository',
       'Write effective repository-level instructions that persist across all sessions',
@@ -427,7 +427,7 @@ const MODULES = [
     series: 'Customization',
     title: 'Customizing Copilot in VS Code',
     duration: '11 min',
-    videoId: 'REPLACE_311',
+    videoId: 'WdZCv4OZcxM',
     objectives: [
       'Configure Copilot settings in VS Code for your preferred workflow',
       'Enable or disable inline suggestions for specific languages',
@@ -478,7 +478,7 @@ const MODULES = [
     series: 'Customization',
     title: 'VS Code Agent Mode — Building With Tools, Docs & MCP',
     duration: '22 min',
-    videoId: 'REPLACE_321',
+    videoId: 'Oc_cAEU',
     objectives: [
       'Understand what "tools" are in the context of Agent mode',
       'Attach documentation files (#file) to give Copilot precise API knowledge',
@@ -535,7 +535,7 @@ const MODULES = [
     series: 'Customization',
     title: 'Level Up Your VS Code Productivity — Mastering AI Workflows',
     duration: '28 min',
-    videoId: 'REPLACE_331',
+    videoId: '0XoXNG65rfg',
     objectives: [
       'Build a personal productivity workflow combining Copilot with VS Code features',
       'Use keyboard shortcuts to stay in flow without reaching for the mouse',
@@ -588,7 +588,7 @@ const MODULES = [
     series: 'Advanced',
     title: 'Beast Mode — Custom Chat Modes & Alternative Prompts',
     duration: '91 min',
-    videoId: 'REPLACE_341',
+    videoId: '0Muxg3xhRLo',
     objectives: [
       'Combine custom instructions, chat modes, and agent tools into a unified "beast mode" workflow',
       'Design prompt strategies for complex, multi-step engineering tasks',
@@ -644,7 +644,7 @@ const MODULES = [
     series: 'Advanced',
     title: 'Agent Skills — A Practical Guide',
     duration: '22 min',
-    videoId: 'REPLACE_351',
+    videoId: 'fabAI1OKKww',
     objectives: [
       'Understand what agent skills are and how they differ from built-in tools',
       'Browse and evaluate available skills for your workflow',
@@ -689,12 +689,12 @@ const MODULES = [
   },
 
   {
-    id: '381',
-    level: 'Level 381',
+    id: '361',
+    level: 'Level 361',
     series: 'Advanced',
     title: 'Let It Code — Agent Skills (skills.md) in VS Code',
     duration: '41 min',
-    videoId: 'REPLACE_381',
+    videoId: 'rIrxkB-02P0',
     objectives: [
       'Create and configure a skills.md file for your project',
       'Define custom skills that Copilot can invoke autonomously',
@@ -746,7 +746,7 @@ const MODULES = [
     series: 'Deep Dives',
     title: 'Model Context Protocol (MCP) — A Standard for Tool Access',
     duration: '26 min',
-    videoId: 'REPLACE_401',
+    videoId: '7j_NE6Pjv-E',
     objectives: [
       'Explain what MCP is and why it was created',
       'Understand the client-server architecture of MCP',
@@ -810,7 +810,7 @@ const MODULES = [
     series: 'Deep Dives',
     title: 'Most Devs Don\'t Understand How Context Windows Work',
     duration: '15 min',
-    videoId: 'REPLACE_411',
+    videoId: '-uW5-TaVXu4',
     objectives: [
       'Define what a context window is and how it is measured in tokens',
       'Understand what content gets included in a context window during a Copilot session',
@@ -866,7 +866,7 @@ const MODULES = [
     series: 'Deep Dives',
     title: 'Stop Wasting Tokens — The Art of Context Engineering',
     duration: '30 min',
-    videoId: 'REPLACE_421',
+    videoId: 'zMM5zqesL1g',
     objectives: [
       'Apply deliberate strategies to maximize the useful information per token',
       'Prioritize which files and content to include in a context window',
@@ -922,7 +922,7 @@ const MODULES = [
     series: 'Deep Dives',
     title: 'Your Codebases, Your Rules',
     duration: '31 min',
-    videoId: 'REPLACE_431',
+    videoId: '_fZZz_gIE8A',
     objectives: [
       'Configure multiple layers of Copilot guidance: user, workspace, and repository',
       'Use .editorconfig and linting rules in combination with Copilot instructions',
@@ -975,7 +975,7 @@ const MODULES = [
     series: 'Testing & Quality',
     title: 'Generate a Test Suite with GitHub Copilot & TDD',
     duration: '18 min',
-    videoId: 'REPLACE_501',
+    videoId: 'f-4NNlIQzQw',
     objectives: [
       'Apply test-driven development (TDD) principles using Copilot as your testing co-pilot',
       'Generate comprehensive unit tests for existing functions using Copilot Chat',
