@@ -478,7 +478,7 @@ const MODULES = [
     series: 'Customization',
     title: 'VS Code Agent Mode — Building With Tools, Docs & MCP',
     duration: '22 min',
-    videoId: 'Oc_cAEU',
+    videoId: 'dutyOc_cAEU',
     objectives: [
       'Understand what "tools" are in the context of Agent mode',
       'Attach documentation files (#file) to give Copilot precise API knowledge',
