@@ -149,9 +149,59 @@ function initLessonPage() {
     return;
   }
 
-  // Update browser tab title
   const mod = getModule(id);
-  document.title = `${mod.level}: ${mod.title} — codewithcopilot.ai`;
+
+  // ── Update all meta tags for this lesson ─────────────────
+  const pageTitle = `${mod.level}: ${mod.title} — codewithcopilot.ai`;
+  const pageDesc  = `${mod.level} · ${mod.duration} · ${mod.objectives[0]} Learn GitHub Copilot free at codewithcopilot.ai`;
+  const pageUrl   = `https://codewithcopilot.ai/lesson.html?id=${mod.id}`;
+
+  document.title = pageTitle;
+
+  // meta description
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', pageDesc);
+
+  // canonical
+  const canonical = document.getElementById('canonical-url');
+  if (canonical) canonical.setAttribute('href', pageUrl);
+
+  // Open Graph
+  const ogUrl   = document.getElementById('og-url');
+  const ogTitle = document.getElementById('og-title');
+  const ogDesc  = document.getElementById('og-description');
+  if (ogUrl)   ogUrl.setAttribute('content', pageUrl);
+  if (ogTitle) ogTitle.setAttribute('content', pageTitle);
+  if (ogDesc)  ogDesc.setAttribute('content', pageDesc);
+
+  // Twitter
+  const twTitle = document.getElementById('tw-title');
+  const twDesc  = document.getElementById('tw-description');
+  if (twTitle) twTitle.setAttribute('content', pageTitle);
+  if (twDesc)  twDesc.setAttribute('content', pageDesc);
+
+  // JSON-LD for this specific lesson
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": `${mod.level}: ${mod.title}`,
+    "description": pageDesc,
+    "url": pageUrl,
+    "learningResourceType": "lesson",
+    "educationalLevel": mod.series,
+    "timeRequired": `PT${parseInt(mod.duration)}M`,
+    "isAccessibleForFree": true,
+    "inLanguage": "en",
+    "teaches": mod.objectives,
+    "provider": {
+      "@type": "Person",
+      "name": "codewithcopilot.ai",
+      "url": "https://codewithcopilot.ai"
+    }
+  });
+  document.head.appendChild(ld);
 
   renderSidebar(id);
   renderLesson(id);

@@ -1,0 +1,52 @@
+# Ignore context.md and CONTEXT.md
+context.md
+CONTEXT.md
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node modules (if you use npm/yarn in the future)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code settings
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Build output (if any in the future)
+dist/
+build/
+
+# SASS/SCSS cache
+.sass-cache/
+
+# Other system files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# Coverage reports
+coverage/
+
+# Local IDE settings
+.idea/
+*.iml
+
+# Backup files
+*~
+*.bak
+
+# Custom: add more patterns as needed
