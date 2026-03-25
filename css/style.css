@@ -904,3 +904,67 @@ p  { color: var(--text-muted); }
 .items-center { align-items: center; }
 .gap-2  { gap: 8px; }
 .gap-4  { gap: 16px; }
+
+/* ── "Well Begun" Milestone Modal ────────────────────────── */
+.milestone-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: milestoneOverlayIn .2s ease;
+}
+@keyframes milestoneOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.milestone-modal {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: milestoneSlideUp .25s ease;
+}
+@keyframes milestoneSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.milestone-modal-emoji {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.milestone-modal h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.milestone-modal p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.milestone-modal-close {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+}
+.milestone-modal-close:hover { background: var(--primary-dark); }
