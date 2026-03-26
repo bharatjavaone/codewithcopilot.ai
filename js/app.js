@@ -41,6 +41,16 @@ const Progress = {
   }
 };
 
+// ── Progress Calculation ─────────────────────────────────────
+// Rule: first completion = 50% ("well begun is half done"),
+//       subsequent completions evenly share the remaining 50%.
+function calculateProgress(done, total) {
+  if (done === 0 || total <= 1) return done === 0 ? 0 : 100;
+  if (done >= total) return 100;
+  if (done === 1)    return 50;
+  return 50 + Math.round(((done - 1) / (total - 1)) * 50);
+}
+
 // ── URL Param Helper ─────────────────────────────────────────
 function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
@@ -75,7 +85,7 @@ function initLearnPage() {
 function renderProgressBanner() {
   const done  = Progress.countCompleted();
   const total = MODULES.length;
-  const pct   = Math.round((done / total) * 100);
+  const pct   = calculateProgress(done, total);
 
   document.getElementById('progress-subtitle').textContent =
     done === 0 ? 'Start your first lesson below ↓'
@@ -212,7 +222,7 @@ function initLessonPage() {
 function renderSidebar(activeId) {
   const done  = Progress.countCompleted();
   const total = MODULES.length;
-  const pct   = Math.round((done / total) * 100);
+  const pct   = calculateProgress(done, total);
 
   document.getElementById('sidebar-progress-text').textContent =
     `${done} of ${total} lessons completed`;
@@ -488,8 +498,14 @@ function submitQuiz(moduleId) {
     });
   });
 
-  // Save progress
+  // Save progress (check first-ever completion before saving)
+  const isFirstEver = Progress.countCompleted() === 0;
   Progress.setModule(moduleId, score, mod.quiz.length);
+
+  // Show milestone modal on first-ever quiz completion
+  if (isFirstEver) {
+    showMilestoneModal();
+  }
 
   // Update score display
   const pct = Math.round((score / mod.quiz.length) * 100);
@@ -545,6 +561,18 @@ function resetQuiz(moduleId) {
   scrollToQuiz();
 }
 
+// ── Milestone Modal ──────────────────────────────────────────
+
+function showMilestoneModal() {
+  const overlay = document.getElementById('milestone-modal-overlay');
+  if (overlay) overlay.classList.remove('hidden');
+}
+
+function closeMilestoneModal() {
+  const overlay = document.getElementById('milestone-modal-overlay');
+  if (overlay) overlay.classList.add('hidden');
+}
+
 // ════════════════════════════════════════════════════════════
 //  BOOTSTRAP — run the right page init based on data-page
 // ════════════════════════════════════════════════════════════
@@ -553,4 +581,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page;
   if (page === 'learn')  initLearnPage();
   if (page === 'lesson') initLessonPage();
+
+  // Close milestone modal when clicking the backdrop
+  const overlay = document.getElementById('milestone-modal-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeMilestoneModal();
+    });
+  }
+
+  // Close milestone modal on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMilestoneModal();
+  });
 });
