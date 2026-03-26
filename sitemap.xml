@@ -81,7 +81,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codewithcopilot.ai/lesson.html?id=381</loc>
+    <loc>https://codewithcopilot.ai/lesson.html?id=361</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -106,9 +106,14 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Lessons — Testing & Quality -->
+  <!-- Lessons — Testing & Quality / Agent Orchestration -->
   <url>
     <loc>https://codewithcopilot.ai/lesson.html?id=501</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codewithcopilot.ai/lesson.html?id=511</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

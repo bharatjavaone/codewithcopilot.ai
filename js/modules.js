@@ -210,7 +210,7 @@ const MODULES = [
     id: '211',
     level: 'Level 211',
     series: 'Prompt Engineering',
-    title: 'Custom Chat Modes in VS Code — From Workflow to Beast Mode',
+    title: 'Custom Chat Modes in VS Code — From Workflow to "Beast Mode"',
     duration: '32 min',
     videoId: '5-HRDXO3iC0',
     objectives: [
@@ -476,7 +476,7 @@ const MODULES = [
     id: '321',
     level: 'Level 321',
     series: 'Customization',
-    title: 'VS Code Agent Mode — Building With Tools, Docs & MCP',
+    title: 'VS Code Agent Mode — Building With Tools, Docs, and MCP',
     duration: '22 min',
     videoId: 'dutyOc_cAEU',
     objectives: [
@@ -692,7 +692,7 @@ const MODULES = [
     id: '361',
     level: 'Level 361',
     series: 'Advanced',
-    title: 'Let It Code — Agent Skills (skills.md) in VS Code',
+    title: 'Let It Cook — Agent Skills (skills.md) in VS Code',
     duration: '41 min',
     videoId: 'rIrxkB-02P0',
     objectives: [
@@ -920,7 +920,7 @@ const MODULES = [
     id: '431',
     level: 'Level 431',
     series: 'Deep Dives',
-    title: 'Your Codebases, Your Rules',
+    title: 'Your Codebase, Your Rules',
     duration: '31 min',
     videoId: '_fZZz_gIE8A',
     objectives: [
@@ -973,55 +973,114 @@ const MODULES = [
     id: '501',
     level: 'Level 501',
     series: 'Testing & Quality',
-    title: 'Generate a Test Suite with GitHub Copilot & TDD',
+    title: 'Generate a Test Suite with GitHub Copilot and PDD',
     duration: '18 min',
     videoId: 'f-4NNlIQzQw',
     objectives: [
-      'Apply test-driven development (TDD) principles using Copilot as your testing co-pilot',
-      'Generate comprehensive unit tests for existing functions using Copilot Chat',
-      'Use Copilot to identify edge cases you might have missed',
-      'Iterate on failing tests with Copilot assistance until all pass'
+      'Understand Prompt-Driven Development (PDD) and how it applies to test generation',
+      'Write effective prompts that cause Copilot to generate comprehensive, meaningful test suites',
+      'Use PDD to describe expected behavior before writing a single line of implementation',
+      'Iterate on prompts to improve test coverage and catch edge cases'
     ],
     takeaways: [
-      'Copilot can generate a skeleton test suite from a function signature in seconds — but you should still think about what cases matter',
-      'TDD with Copilot: write a failing test, ask Copilot to write the implementation to make it pass, repeat',
-      'Copilot is excellent at generating edge case variations — ask it "what edge cases am I missing?"',
-      'Always review generated tests — a test that always passes regardless of implementation is worse than no test'
+      'PDD flips the script — you describe the behavior you want in a prompt, and let Copilot generate both tests and implementation from that spec',
+      'A well-crafted prompt is your specification: the clearer the prompt, the better the test suite Copilot generates',
+      'Prompt-first thinking forces you to clarify requirements before touching code — catching ambiguity early',
+      'Always review Copilot-generated tests — a test that always passes regardless of implementation is worse than no test'
     ],
     resources: [
-      { title: 'TDD with GitHub Copilot (blog)', url: 'https://github.blog/developer-skills/github/how-to-write-tests-with-github-copilot/' },
+      { title: 'Generating tests with GitHub Copilot (blog)', url: 'https://github.blog/developer-skills/github/how-to-write-tests-with-github-copilot/' },
       { title: 'VS Code Testing overview', url: 'https://code.visualstudio.com/docs/editor/testing' }
     ],
     quiz: [
       {
-        question: 'What does TDD (Test-Driven Development) mean?',
+        question: 'What does PDD (Prompt-Driven Development) mean in the context of this lesson?',
         type: 'single',
-        options: ['Writing tests after the code is complete', 'Writing a failing test first, then writing just enough code to make it pass', 'Testing only in production', 'Using AI to skip testing entirely'],
+        options: ['Writing code before writing any prompts', 'Using prompts as the primary specification that drives both implementation and test generation', 'A paid GitHub Copilot feature for enterprise teams', 'Prompting Copilot to debug existing code'],
         answer: 1
       },
       {
-        question: 'What is the recommended Copilot + TDD workflow?',
+        question: 'What is the key advantage of a prompt-first approach to test generation?',
         type: 'single',
-        options: ['Ask Copilot to write all code first, then test it', 'Write a failing test → ask Copilot to implement the code → verify it passes → repeat', 'Let Copilot write both tests and implementation simultaneously', 'Disable Copilot during testing to avoid bias'],
+        options: ['It skips the need for any human review', 'It forces you to clarify expected behavior before writing code, catching ambiguity early', 'It only works with JavaScript', 'It replaces the need for a test framework'],
         answer: 1
       },
       {
-        question: 'How can you use Copilot to find edge cases in your tests?',
+        question: 'What makes a prompt effective for generating a test suite?',
         type: 'single',
-        options: ['Copilot cannot suggest edge cases', 'Ask Copilot directly: "What edge cases am I missing in this test suite?"', 'Run all tests and Copilot will automatically flag uncovered cases', 'Use the @edge participant in Copilot Chat'],
+        options: ['Keeping it as short as possible', 'Describing the expected behavior, inputs, outputs, and edge cases clearly', 'Using only technical jargon', 'Asking Copilot to "write good tests"'],
         answer: 1
       },
       {
         question: 'Why should you always review Copilot-generated tests carefully?',
         type: 'single',
-        options: ['Copilot tests always have syntax errors', 'A test that always passes regardless of the implementation is worse than no test at all', 'Generated tests don\'t work in all frameworks', 'VS Code requires manual approval for all generated tests'],
+        options: ['Copilot tests always have syntax errors', 'A test that always passes regardless of the implementation is worse than no test at all', 'Generated tests don\'t work in all frameworks', 'VS Code requires manual approval for generated tests'],
         answer: 1
       },
       {
-        question: 'Which of the following are good uses of Copilot in a testing workflow? (Select all that apply)',
+        question: 'Which of the following are good uses of Copilot in a PDD testing workflow? (Select all that apply)',
         type: 'multi',
-        options: ['Generating an initial test skeleton from a function signature', 'Asking for edge case variations you may have missed', 'Writing implementation code to satisfy a failing test', 'Reviewing test coverage and suggesting what\'s missing'],
+        options: ['Writing a detailed prompt describing the function\'s expected behavior first', 'Asking Copilot to generate edge case variations from your prompt', 'Letting Copilot generate implementation that satisfies the generated tests', 'Asking Copilot to identify coverage gaps in the generated suite'],
         answers: [0, 1, 2, 3]
+      }
+    ]
+  },
+
+  // ── LEVEL 500s continued ──────────────────────────────────
+
+  {
+    id: '511',
+    level: 'Level 511',
+    series: 'Testing & Quality',
+    title: 'Agent Orchestration',
+    duration: '25 min',
+    videoId: '-BhfcPseWFQ',
+    objectives: [
+      'Understand what agent orchestration means in the context of GitHub Copilot',
+      'Learn how multiple agents can be coordinated to complete complex, multi-step tasks',
+      'Identify when orchestration adds value versus running a single agent',
+      'Apply orchestration patterns to real-world development workflows'
+    ],
+    takeaways: [
+      'Agent orchestration is the coordination of multiple AI agents working together toward a shared goal',
+      'Each agent in an orchestrated workflow has a focused role — breaking a complex task into manageable, specialized steps',
+      'Orchestration unlocks tasks too large or complex for a single agent to handle reliably',
+      'The human role in orchestration shifts from doing to directing — reviewing handoffs between agents and correcting course'
+    ],
+    resources: [
+      { title: 'GitHub Copilot agent mode overview', url: 'https://code.visualstudio.com/docs/copilot/copilot-edits' },
+      { title: 'GitHub Copilot extensibility overview', url: 'https://code.visualstudio.com/docs/copilot/copilot-extensibility-overview' }
+    ],
+    quiz: [
+      {
+        question: 'What is agent orchestration in the context of GitHub Copilot?',
+        type: 'single',
+        options: ['Running the same agent multiple times', 'Coordinating multiple AI agents to work together on a complex, multi-step task', 'A premium GitHub Copilot Enterprise feature only', 'Using Copilot to write orchestration code for other systems'],
+        answer: 1
+      },
+      {
+        question: 'Why is breaking a complex task across multiple specialized agents better than one large agent?',
+        type: 'single',
+        options: ['It is always faster', 'Each agent stays focused on a well-defined role, improving reliability and making failures easier to isolate', 'It reduces GitHub Actions costs', 'Single agents cannot handle any multi-step tasks'],
+        answer: 1
+      },
+      {
+        question: 'When does agent orchestration add the most value?',
+        type: 'single',
+        options: ['For simple one-line code changes', 'For complex workflows that span multiple concerns — e.g. research, then code, then test, then document', 'Only for open source projects', 'Only when using MCP servers'],
+        answer: 1
+      },
+      {
+        question: 'What is the human\'s primary role in an orchestrated agent workflow?',
+        type: 'single',
+        options: ['Writing all the code the agents will execute', 'Directing the workflow, reviewing handoffs between agents, and correcting course when needed', 'Monitoring token usage across agents', 'Approving every line of code generated'],
+        answer: 1
+      },
+      {
+        question: 'Which of the following are characteristics of well-designed agent orchestration? (Select all that apply)',
+        type: 'multi',
+        options: ['Each agent has a clear, focused responsibility', 'Agents pass structured outputs to the next agent in the chain', 'One agent tries to do everything at once', 'The overall workflow has a defined goal and stopping condition'],
+        answers: [0, 1, 3]
       }
     ]
   }
