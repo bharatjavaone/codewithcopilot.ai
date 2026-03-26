@@ -893,6 +893,60 @@ p  { color: var(--text-muted); }
   .quiz-footer .btn { text-align: center; justify-content: center; }
 }
 
+/* ── Practice Repo CTA (post-quiz) ───────────────────────── */
+.practice-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius-lg);
+  margin-top: 16px;
+}
+.practice-cta-text {
+  flex: 1;
+  min-width: 200px;
+}
+.practice-cta-text strong {
+  display: block;
+  font-size: .95rem;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.practice-cta-text span {
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+.btn-practice {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background: var(--accent);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: .875rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: opacity .15s;
+}
+.btn-practice:hover {
+  opacity: .85;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Practice link in resources list */
+.practice-link {
+  font-weight: 600;
+  color: var(--accent) !important;
+}
+.practice-link:hover {
+  color: var(--primary-dark) !important;
+}
+
 /* ── Utility ─────────────────────────────────────────────── */
 .text-center { text-align: center; }
 .text-muted  { color: var(--text-muted); }

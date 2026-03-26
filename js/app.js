@@ -268,9 +268,11 @@ function renderLesson(id) {
   const takeawaysHtml = mod.takeaways
     .map(t => `<li>${esc(t)}</li>`).join('');
 
-  const resourcesHtml = mod.resources
-    .map(r => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">↗ ${esc(r.title)}</a></li>`)
-    .join('');
+  const practiceUrl = `https://github.com/bharatjavaone/codewithcopilot-practice/tree/main/level-${id}`;
+  const resourcesHtml = [
+    ...mod.resources.map(r => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">↗ ${esc(r.title)}</a></li>`),
+    `<li><a href="${practiceUrl}" target="_blank" rel="noopener" class="practice-link">🧑‍💻 Hands-on exercise — try this level in the practice repo</a></li>`
+  ].join('');
 
   // Video: show real embed or placeholder
   const isPlaceholder = !mod.videoId || mod.videoId.startsWith('REPLACE_');
@@ -518,6 +520,23 @@ function submitQuiz(moduleId) {
 
   // Scroll to result
   msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  // Practice repo CTA — inject below result message after submission
+  const practiceLevelUrl = `https://github.com/bharatjavaone/codewithcopilot-practice/tree/main/level-${moduleId}`;
+  if (!document.getElementById('practice-cta')) {
+    const cta = document.createElement('div');
+    cta.id = 'practice-cta';
+    cta.className = 'practice-cta';
+    cta.innerHTML = `
+      <div class="practice-cta-text">
+        <strong>🧑‍💻 Now try it hands-on</strong>
+        <span>The exercise for this level is waiting in the practice repo — fork it and build it in VS Code with Copilot.</span>
+      </div>
+      <a href="${practiceLevelUrl}" target="_blank" rel="noopener" class="btn-practice">
+        Open Exercise →
+      </a>`;
+    msg.parentNode.insertBefore(cta, msg.nextSibling);
+  }
 }
 
 function resetQuiz(moduleId) {
