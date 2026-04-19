@@ -172,9 +172,16 @@ function initLessonPage() {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', pageDesc);
 
-  // canonical
-  const canonical = document.getElementById('canonical-url');
-  if (canonical) canonical.setAttribute('href', pageUrl);
+  // canonical — create the tag if absent (it is not in static HTML),
+  // then set it to the lesson-specific URL so Google indexes each lesson correctly
+  let canonical = document.getElementById('canonical-url');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.rel = 'canonical';
+    canonical.id = 'canonical-url';
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', pageUrl);
 
   // Open Graph
   const ogUrl   = document.getElementById('og-url');
